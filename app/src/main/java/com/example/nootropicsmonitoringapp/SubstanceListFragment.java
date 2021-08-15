@@ -12,11 +12,10 @@ import androidx.fragment.app.Fragment;
 
 import org.jetbrains.annotations.NotNull;
 
-public class EffectListFragment extends Fragment {
+public class SubstanceListFragment extends Fragment {
 
-    public  static  EffectListFragment getInstance(){
-        EffectListFragment effectListFragment = new EffectListFragment();
-        return  effectListFragment;
+    public  static SubstanceListFragment getInstance(){
+        return new SubstanceListFragment();
     }
 
     @Override

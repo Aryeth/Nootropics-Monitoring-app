@@ -2,7 +2,9 @@ package com.example.nootropicsmonitoringapp;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.CalendarView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
@@ -17,11 +19,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         tabLayout =findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.view_pager);
-        getTabs();
 
+        getTabs();
 
     }
 
@@ -32,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-
-                ViewPagerAdapter.addFragment(EffectListFragment.getInstance(), "Effect List");
+                ViewPagerAdapter.addFragment(SubstanceListFragment.getInstance(), "Substance List");
                 ViewPagerAdapter.addFragment(CalendarFragment.getInstance(), "Calendar");
                 ViewPagerAdapter.addFragment(RecapFragment.getInstance(), "Recap");
 
